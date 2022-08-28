@@ -62,6 +62,10 @@ class ViewController: UIViewController {
             emotionLabelArray[item].textAlignment = .center
             print("\(item)번째 값은 \(emotionLabelArray[item])이다")
         }
+        
+        showAlertController()
+        
+        //let literal = #imageLiteral(resourceName: "sesac_slime8")
     }
     
     func navigationItemAttribute() {
@@ -74,8 +78,32 @@ class ViewController: UIViewController {
     
     @IBAction func emotionButtonClicked(_ sender: UIButton) {
         countArray[sender.tag] += 1
+        print(sender.tag, sender.currentTitle, sender.currentImage)
         emotionLabelArray[sender.tag].text = "\(emotionArray[sender.tag]) \(countArray[sender.tag])"
     }
     
+    //alert 띄우기
+    func showAlertController() {
+        
+        //1. 흰바탕 적용: UIAlertController(액션시트는 title, message를 잘 사용안함: nil값 입력하면 비어있도록 처리됨)
+        let alert = UIAlertController(title: "타이틀", message: "여기는 메시지가 들어갑니다", preferredStyle: .actionSheet)
+        
+        //2. 버튼 만들기: 액션시트에서 cancel style적용하면 버튼이 맨밑에 따로 떨어져있음(default style은 버튼 연결되어있음)
+        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        let web = UIAlertAction(title: "새창으로 열기", style: .default, handler: nil)
+        let copy = UIAlertAction(title: "복사하기", style: .default, handler: nil)
+        
+        //3. 흰바탕에 버튼 합치기: 취소버튼은 코드구현순서 상관 없이 위치가 정해져있음(2개 이하: 왼쪽, 3개 이상: 맨 밑)
+        alert.addAction(copy)
+        alert.addAction(web)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        //4. 버튼 클릭 시 화면 띄우기: present
+        present(alert, animated: true, completion: nil)
+        
+        
+    }
 }
 
