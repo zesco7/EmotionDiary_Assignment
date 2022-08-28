@@ -27,12 +27,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiu-bx-yCl">
                                         <rect key="frame" x="131.5" y="0.0" width="111" height="124.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime2"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y39-rH-mZv">
                                         <rect key="frame" x="262.5" y="0.0" width="111.5" height="124.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime3"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -71,17 +71,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-D5-zIB">
                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="125"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime4"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbw-h0-BeM">
                                         <rect key="frame" x="131.5" y="0.0" width="111" height="125"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime5"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-pE-BJV">
                                         <rect key="frame" x="262.5" y="0.0" width="111.5" height="125"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime6"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -120,17 +120,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R10-X3-DHl">
                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="124.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime7"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdc-we-l36">
                                         <rect key="frame" x="131.5" y="0.0" width="111" height="124.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime8"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSM-Ub-OPX">
                                         <rect key="frame" x="262.5" y="0.0" width="111.5" height="124.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="sesac_slime1"/>
+                                        <state key="normal" image="sesac_slime9"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -189,6 +189,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="epG-he-FMi"/>
                     <connections>
+                        <outlet property="emotionLabel1" destination="yFT-C8-9Xa" id="ASK-V2-iM0"/>
+                        <outlet property="emotionLabel2" destination="kl4-wb-oGo" id="MKs-0c-q9h"/>
+                        <outlet property="emotionLabel3" destination="jtm-xg-20T" id="YuN-7i-Jba"/>
+                        <outlet property="emotionLabel4" destination="npD-a8-4oO" id="dVc-BF-tdj"/>
+                        <outlet property="emotionLabel5" destination="MOQ-Zp-FC1" id="b7H-Sb-SmZ"/>
+                        <outlet property="emotionLabel6" destination="8tg-wP-Neu" id="gBu-U9-ROx"/>
+                        <outlet property="emotionLabel7" destination="Fcs-ke-xht" id="MIp-Gk-Czq"/>
+                        <outlet property="emotionLabel8" destination="YD3-DT-c1W" id="gIT-kF-Cla"/>
+                        <outlet property="emotionLabel9" destination="57g-gA-ZRe" id="lUp-Rt-Ne8"/>
                         <outletCollection property="emotionButtonOutletCollection" destination="vVu-bC-yZU" collectionClass="NSMutableArray" id="OhV-Sc-kh1"/>
                         <outletCollection property="emotionButtonOutletCollection" destination="eiu-bx-yCl" collectionClass="NSMutableArray" id="MLg-Sd-Vax"/>
                         <outletCollection property="emotionButtonOutletCollection" destination="Y39-rH-mZv" collectionClass="NSMutableArray" id="4Gy-Dk-VBE"/>
@@ -225,6 +234,14 @@
     </scenes>
     <resources>
         <image name="sesac_slime1" width="278" height="258"/>
+        <image name="sesac_slime2" width="278" height="258"/>
+        <image name="sesac_slime3" width="278" height="258"/>
+        <image name="sesac_slime4" width="278" height="258"/>
+        <image name="sesac_slime5" width="278" height="258"/>
+        <image name="sesac_slime6" width="278" height="258"/>
+        <image name="sesac_slime7" width="278" height="258"/>
+        <image name="sesac_slime8" width="278" height="258"/>
+        <image name="sesac_slime9" width="278" height="258"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
