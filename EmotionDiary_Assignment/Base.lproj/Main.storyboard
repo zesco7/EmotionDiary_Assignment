@@ -343,6 +343,9 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="lbV-1p-eDH">
                                 <rect key="frame" x="39" y="49" width="336" height="414"/>
+                                <connections>
+                                    <action selector="setDdayDate:" destination="wsW-fr-zLd" eventType="valueChanged" id="6z0-KX-T7O"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krq-b6-wzB">
                                 <rect key="frame" x="87" y="551" width="42" height="21"/>
