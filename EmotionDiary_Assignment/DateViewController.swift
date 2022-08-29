@@ -7,6 +7,12 @@
 
 import UIKit
 
+/*질문
+ -. 열거형 사용해서 D+100, imageFileName 표시하는 방법
+ -. 데이트피커 날짜값을 레이블에 표시하는 방법
+ -. D+100 레이블너비 오토레이아웃으로 글자수에 따라 자동조정되는 방법
+ */
+
 enum Dday: String {
     case dDayPlus100 = "D+100"
     case dDayPlus200 = "D+200"
