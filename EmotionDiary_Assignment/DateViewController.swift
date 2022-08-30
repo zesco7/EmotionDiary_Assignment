@@ -8,16 +8,16 @@
 import UIKit
 
 /*질문
- -. 열거형 사용해서 D+100, imageFileName 표시하는 방법 -> 해결
- -. 데이트피커 날짜값을 레이블에 표시하는 방법 -> 해결
- -. D+100 레이블너비 오토레이아웃으로 글자수에 따라 자동조정되는 방법
+ -. 열거형 사용해서 D+100, imageFileName 표시하는 방법 -> 해결: 열거형 Dday는 인덱스가 없기 때문에 배열형태의 반복문처리를 할 수 없다.(배열-반복문을 사용하거나 개별값을 넣어주는 방법으로 해결해야함)
+ -. 데이트피커 날짜값을 레이블에 표시하는 방법 -> 해결: 데이트피커 sender를 변수에 담고 날짜 format 적용하는 방식으로 처리
+ -. D+100 레이블너비 오토레이아웃으로 글자수에 따라 자동조정되는 방법 -> 해결: 객체 width에서 constant 범위를 부등호로 설정
  -. pickerview 하단 시간 짤리는거 해결 방법
- -. pickerview 선택시간 한국시간으로 설정하는 방법
- -. 열거형 rawValue대신 반환값 사용해서 해결하는 방법
- -. 전체적으로 반복코드 줄이는 방법
+ -. pickerview 선택시간 한국시간으로 설정하는 방법 -> 해결: locale, timezone활용
+ -. 열거형 rawValue대신 반환값 사용해서 해결하는 방법 -> 해결: 동일질문 해결
+ -. 전체적으로 반복코드 줄이는 방법: 현재 상태에서는 코드축약보다 구현을 중심으로 단계별 코딩을 하는게 효과적이다.
  */
 
-//Dday표시 열거형 처리
+//Dday표시 열거형 처리:
 enum Dday: String {
     case dDayPlus100 = "D+100"
     case dDayPlus200 = "D+200"
@@ -111,6 +111,7 @@ class DateViewController: UIViewController {
     }
     
     @IBAction func setDdayDate(_ sender: UIDatePicker) {
+        
         let datePickerView = sender
         let selectedDate = datePickerView.date
         let plus100ToSelectedDate = Calendar.current.date(byAdding: .day, value: 100, to: selectedDate)!
@@ -120,11 +121,14 @@ class DateViewController: UIViewController {
         
         let format = DateFormatter()
         format.dateFormat = "yyyy년 MM월 dd일"
+        format.locale = Locale(identifier: "ko-KR") //한국시간설정1.
+        format.timeZone = TimeZone(abbreviation: "KST") //한국시간설정2.
+        
         let datePlus100 = format.string(from: plus100ToSelectedDate)
         let datePlus200 = format.string(from: plus200ToSelectedDate)
         let datePlus300 = format.string(from: plus300ToSelectedDate)
         let datePlus400 = format.string(from: plus400ToSelectedDate)
-        
+
         dDayPlus100Date.text = datePlus100
         dDayPlus200Date.text = datePlus200
         dDayPlus300Date.text = datePlus300
