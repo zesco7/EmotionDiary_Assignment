@@ -52,6 +52,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var emotionLabel8: UILabel!
     @IBOutlet weak var emotionLabel9: UILabel!
     
+    @IBOutlet weak var clickCountSaveButton: UIButton!
+    @IBOutlet weak var clickCountResetButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +67,7 @@ class ViewController: UIViewController {
         }
         
         showAlertController()
+        resetButtonAttribute()
         
         //let literal = #imageLiteral(resourceName: "sesac_slime8")
     }
@@ -102,8 +106,35 @@ class ViewController: UIViewController {
         
         //4. 버튼 클릭 시 화면 띄우기: present
         present(alert, animated: true, completion: nil)
-        
-        
     }
+    
+    func resetButtonAttribute() {
+        clickCountSaveButton.setTitle("카운트 저장", for: .normal)
+        clickCountSaveButton.setTitleColor(.black, for: .normal)
+        clickCountSaveButton.backgroundColor = .green
+        clickCountSaveButton.layer.cornerRadius = 20
+        clickCountSaveButton.layer.borderWidth = 0
+        clickCountSaveButton.titleLabel?.textAlignment = .center
+        
+        clickCountResetButton.setTitle("카운트 리셋", for: .normal)
+        clickCountResetButton.setTitleColor(.black, for: .normal)
+        clickCountResetButton.backgroundColor = .red
+        clickCountResetButton.layer.cornerRadius = 20
+        clickCountResetButton.layer.borderWidth = 0
+        clickCountResetButton.titleLabel?.textAlignment = .center
+    }
+    
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
+        let currentCount = UserDefaults.standard.array(forKey: "clickCount")
+        let updatedCount = countArray
+        UserDefaults.standard.set(updatedCount, forKey: "clickCount")
+        countArray = UserDefaults.standard.array(forKey: "clickCount")
+    }
+    
+    @IBAction func reestButtonClicked(_ sender: UIButton) {
+        UserDefaults.standard.removeObject(forKey: "clickCount")
+    }
+    
+    
 }
 

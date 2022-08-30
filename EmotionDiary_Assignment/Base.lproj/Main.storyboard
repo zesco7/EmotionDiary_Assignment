@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wsW-fr-zLd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -190,16 +190,36 @@
                                     <constraint firstAttribute="width" secondItem="6fb-ck-rRj" secondAttribute="height" multiplier="87:10" id="d0k-NN-Qme"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-zr-l8T">
+                                <rect key="frame" x="80" y="766" width="77" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="resetButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09d-Rq-fJv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-v6-hd4">
+                                <rect key="frame" x="257" y="766" width="77" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="reestButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSe-8Y-Jfx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1CH-BF-L48" secondAttribute="trailing" constant="20" id="1Zf-Au-1GV"/>
+                            <constraint firstItem="MLc-zr-l8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="2Lh-wb-0fT"/>
                             <constraint firstItem="6fb-ck-rRj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6If-xT-R1K"/>
                             <constraint firstItem="Mjo-G0-L29" firstAttribute="top" secondItem="5HK-o8-JLx" secondAttribute="bottom" constant="10" id="Ak6-hH-P6Y"/>
+                            <constraint firstItem="Alh-v6-hd4" firstAttribute="leading" secondItem="MLc-zr-l8T" secondAttribute="trailing" constant="100" id="BdQ-aN-fme"/>
+                            <constraint firstItem="Alh-v6-hd4" firstAttribute="width" secondItem="MLc-zr-l8T" secondAttribute="width" id="EPY-g1-wL3"/>
                             <constraint firstItem="1CH-BF-L48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FmP-P3-adU"/>
                             <constraint firstItem="5HK-o8-JLx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HAt-H2-Q0B"/>
                             <constraint firstItem="gWs-sd-TfF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Kqg-40-AMs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Alh-v6-hd4" secondAttribute="trailing" constant="80" id="Qsk-Tg-6pi"/>
                             <constraint firstItem="5HK-o8-JLx" firstAttribute="top" secondItem="1CH-BF-L48" secondAttribute="bottom" constant="5" id="W5W-ON-rIr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5HK-o8-JLx" secondAttribute="trailing" constant="20" id="fdp-8q-crq"/>
                             <constraint firstAttribute="trailing" secondItem="gWs-sd-TfF" secondAttribute="trailing" constant="20" id="fky-9G-f8A"/>
@@ -210,12 +230,16 @@
                             <constraint firstItem="TpF-kz-7X3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qrg-9Q-Wn4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6fb-ck-rRj" secondAttribute="trailing" constant="20" id="syg-CR-2Az"/>
                             <constraint firstItem="1CH-BF-L48" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="uA8-ta-Tgg"/>
+                            <constraint firstItem="Alh-v6-hd4" firstAttribute="top" secondItem="6fb-ck-rRj" secondAttribute="bottom" constant="40" id="yam-47-mM0"/>
                             <constraint firstItem="Mjo-G0-L29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zIs-cC-ru3"/>
+                            <constraint firstItem="MLc-zr-l8T" firstAttribute="top" secondItem="6fb-ck-rRj" secondAttribute="bottom" constant="40" id="zOt-Me-2qh"/>
                             <constraint firstItem="gWs-sd-TfF" firstAttribute="top" secondItem="TpF-kz-7X3" secondAttribute="bottom" constant="10" id="zsW-bT-UBR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="epG-he-FMi"/>
                     <connections>
+                        <outlet property="clickCountResetButton" destination="Alh-v6-hd4" id="Lc6-MT-9fW"/>
+                        <outlet property="clickCountSaveButton" destination="MLc-zr-l8T" id="8D1-q9-xog"/>
                         <outlet property="emotionLabel1" destination="yFT-C8-9Xa" id="ASK-V2-iM0"/>
                         <outlet property="emotionLabel2" destination="kl4-wb-oGo" id="MKs-0c-q9h"/>
                         <outlet property="emotionLabel3" destination="jtm-xg-20T" id="YuN-7i-Jba"/>
