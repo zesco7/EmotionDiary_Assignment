@@ -59,17 +59,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItemAttribute()
-        
+        emotionInfoLabel()
+        showAlertController()
+        resetButtonAttribute()
+
+        //let literal = #imageLiteral(resourceName: "sesac_slime8")
+    }
+    func emotionInfoLabel() {
         for item in 0..<emotionLabelArray.count {
             emotionLabelArray[item].text = emotionArray[item]
             emotionLabelArray[item].textAlignment = .center
             print("\(item)번째 값은 \(emotionLabelArray[item])이다")
         }
-        
-        showAlertController()
-        resetButtonAttribute()
-        
-        //let literal = #imageLiteral(resourceName: "sesac_slime8")
     }
     
     func navigationItemAttribute() {
@@ -81,9 +82,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func emotionButtonClicked(_ sender: UIButton) {
+        
         countArray[sender.tag] += 1
-        print(sender.tag, sender.currentTitle, sender.currentImage)
         emotionLabelArray[sender.tag].text = "\(emotionArray[sender.tag]) \(countArray[sender.tag])"
+        //print(sender.tag, sender.currentTitle, sender.currentImage)
     }
     
     //alert 띄우기
@@ -124,17 +126,19 @@ class ViewController: UIViewController {
         clickCountResetButton.titleLabel?.textAlignment = .center
     }
     
+    
     @IBAction func saveButtonClicked(_ sender: UIButton) {
         let currentCount = UserDefaults.standard.array(forKey: "clickCount")
         let updatedCount = countArray
         UserDefaults.standard.set(updatedCount, forKey: "clickCount")
-        countArray = UserDefaults.standard.array(forKey: "clickCount")
+        countArray = UserDefaults.standard.array(forKey: "clickCount") as! [Int]
+        emotionLabelArray[sender.tag].text = "\(emotionArray[sender.tag]) \(countArray[sender.tag])"
+        //print(UserDefaults.standard.array(forKey: "clickCount") as! [Int])
     }
     
     @IBAction func reestButtonClicked(_ sender: UIButton) {
         UserDefaults.standard.removeObject(forKey: "clickCount")
+        print(UserDefaults.standard.removeObject(forKey: "clickCount"))
     }
-    
-    
 }
 

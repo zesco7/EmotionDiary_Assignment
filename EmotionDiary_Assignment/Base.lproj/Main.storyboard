@@ -195,7 +195,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="resetButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09d-Rq-fJv"/>
+                                    <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRL-de-zaB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-v6-hd4">
@@ -203,7 +203,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="reestButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSe-8Y-Jfx"/>
+                                    <action selector="reestButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F21-pg-qD0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -238,8 +238,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="epG-he-FMi"/>
                     <connections>
-                        <outlet property="clickCountResetButton" destination="Alh-v6-hd4" id="Lc6-MT-9fW"/>
-                        <outlet property="clickCountSaveButton" destination="MLc-zr-l8T" id="8D1-q9-xog"/>
+                        <outlet property="clickCountResetButton" destination="Alh-v6-hd4" id="1ya-Xv-aEb"/>
+                        <outlet property="clickCountSaveButton" destination="MLc-zr-l8T" id="b3n-7D-oaH"/>
                         <outlet property="emotionLabel1" destination="yFT-C8-9Xa" id="ASK-V2-iM0"/>
                         <outlet property="emotionLabel2" destination="kl4-wb-oGo" id="MKs-0c-q9h"/>
                         <outlet property="emotionLabel3" destination="jtm-xg-20T" id="YuN-7i-Jba"/>
