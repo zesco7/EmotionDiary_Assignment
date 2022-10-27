@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         //데이터 로드: 화면에 표시할 데이터변수를 viewDidLoad에 선언하여 기존 countArray가 아닌 값이 업데이트된 countArray를 화면에 표시하도록 한다.
         countArray = UserDefaults.standard.array(forKey: "clickCount") as! [Int]
         
+        
         navigationItemAttribute()
         emotionInfoLabel()
         showAlertController()
@@ -138,7 +139,7 @@ class ViewController: UIViewController {
     
     //데이터 처리: 감정버튼 클릭수 데이터 저장(UserDefaults 사용)
     @IBAction func saveButtonClicked(_ sender: UIButton) {
-        let currentCount = UserDefaults.standard.array(forKey: "clickCount")
+        //let currentCount = UserDefaults.standard.array(forKey: "clickCount")
         let updatedCount = countArray
         UserDefaults.standard.set(updatedCount, forKey: "clickCount")
         countArray = UserDefaults.standard.array(forKey: "clickCount") as! [Int]
@@ -150,6 +151,7 @@ class ViewController: UIViewController {
         
         let initClickCount = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         UserDefaults.standard.set(initClickCount, forKey: "clickCount")
+        countArray = UserDefaults.standard.array(forKey: "initClickCount") as! [Int]
         print(UserDefaults.standard.set(initClickCount, forKey: "clickCount"))
         
         //UserDefaults.standard.removeObject(forKey: "clickCount")

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wsW-fr-zLd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -366,12 +366,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="lbV-1p-eDH">
-                                <rect key="frame" x="39" y="49" width="336" height="414"/>
-                                <connections>
-                                    <action selector="setDdayDate:" destination="wsW-fr-zLd" eventType="valueChanged" id="6z0-KX-T7O"/>
-                                </connections>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krq-b6-wzB">
                                 <rect key="frame" x="87" y="551" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -384,6 +378,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6d-dH-bsM">
+                                <rect key="frame" x="347" y="78" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="moveToDetailButtonClicked:" destination="wsW-fr-zLd" eventType="touchUpInside" id="KVw-XB-nQz"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="lbV-1p-eDH">
+                                <rect key="frame" x="39" y="49" width="336" height="414"/>
+                                <connections>
+                                    <action selector="setDdayDate:" destination="wsW-fr-zLd" eventType="valueChanged" id="6z0-KX-T7O"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ibF-f1-EWP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -435,6 +444,7 @@
                         <outlet property="dateImageView2" destination="Xyt-9N-BMP" id="5tS-k9-llD"/>
                         <outlet property="dateImageView3" destination="P7G-P3-2HA" id="LRI-cH-KzZ"/>
                         <outlet property="dateImageView4" destination="qTr-BJ-qsf" id="wUH-Bv-oc0"/>
+                        <outlet property="moveToDetailButton" destination="h6d-dH-bsM" id="GVV-cy-Baf"/>
                         <outlet property="selectionDatePicker" destination="lbV-1p-eDH" id="01t-iu-Tds"/>
                     </connections>
                 </viewController>
@@ -442,16 +452,28 @@
             </objects>
             <point key="canvasLocation" x="1928.985507246377" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="LxY-4x-5F7">
             <objects>
-                <viewController id="YDO-hm-Cbx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="YDO-hm-Cbx" customClass="DetailViewController" customModule="EmotionDiary_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkg-TV-glN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-5G-FQS">
+                                <rect key="frame" x="174" y="408" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4kj-Mf-b0c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="rkX-5G-FQS" id="jYG-rz-VkC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a68-QM-xl4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9828993E28CA4099000F4040 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9828993D28CA4099000F4040 /* DetailViewController.swift */; };
 		98D8D3B028BB3C72007A24AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D8D3AF28BB3C72007A24AB /* AppDelegate.swift */; };
 		98D8D3B228BB3C72007A24AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D8D3B128BB3C72007A24AB /* SceneDelegate.swift */; };
 		98D8D3B428BB3C72007A24AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D8D3B328BB3C72007A24AB /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9828993D28CA4099000F4040 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		98D8D3AC28BB3C72007A24AB /* EmotionDiary_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D8D3AF28BB3C72007A24AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D8D3B128BB3C72007A24AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				98D8D3B128BB3C72007A24AB /* SceneDelegate.swift */,
 				98D8D3B328BB3C72007A24AB /* ViewController.swift */,
 				98D8D3B528BB3C72007A24AB /* Main.storyboard */,
+				9828993D28CA4099000F4040 /* DetailViewController.swift */,
 				98D8D3D928BCF3AF007A24AB /* DateViewController.swift */,
 				98D8D3B828BB3C73007A24AB /* Assets.xcassets */,
 				98D8D3BA28BB3C73007A24AB /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				98D8D3DA28BCF3AF007A24AB /* DateViewController.swift in Sources */,
 				98D8D3B428BB3C72007A24AB /* ViewController.swift in Sources */,
+				9828993E28CA4099000F4040 /* DetailViewController.swift in Sources */,
 				98D8D3B028BB3C72007A24AB /* AppDelegate.swift in Sources */,
 				98D8D3B228BB3C72007A24AB /* SceneDelegate.swift in Sources */,
 			);

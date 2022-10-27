@@ -61,6 +61,7 @@ class DateViewController: UIViewController {
     @IBOutlet weak var dDayPlus300Date: UILabel!
     @IBOutlet weak var dDayPlus400Date: UILabel!
     
+    @IBOutlet weak var moveToDetailButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -134,4 +135,14 @@ class DateViewController: UIViewController {
         dDayPlus300Date.text = datePlus300
         dDayPlus400Date.text = datePlus400
     }
+    
+    @IBAction func moveToDetailButtonClicked(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController //타입캐스팅 안함
+        //vc.testValue = //값전달 자료형
+    
+        present(vc, animated: true)
+    }
+    
 }
